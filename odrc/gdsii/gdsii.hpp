@@ -3,11 +3,18 @@
 #include <algorithm>
 #include <bitset>
 #include <cstddef>
-#include <filesystem>
 #include <string>
 #include <type_traits>
 #include <utility>
 #include <vector>
+
+#if defined(__GNUC__) && (__GNUC__ >= 8)
+#include <filesystem>
+namespace fs = std::filesystem;
+#else
+#include <experimental/filesystem>
+namespace fs = std::experimental::filesystem;
+#endif
 
 #include <odrc/core/database.hpp>
 
@@ -68,6 +75,6 @@ std::string          parse_string(const std::byte* begin, const std::byte* end);
 odrc::util::datetime parse_datetime(const std::byte* bytes);
 odrc::core::coord    parse_coord(const std::byte* bytes);
 
-odrc::core::database read(const std::filesystem::path& file_path);
+odrc::core::database read(const fs::path& file_path);
 
 }  // namespace odrc::gdsii

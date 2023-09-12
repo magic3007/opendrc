@@ -63,19 +63,19 @@ int main(int argc, char* argv[]) {
     // }
     // odrc::width_check(db, 11, 650);
     {
-      odrc::util::logger logger("/dev/null", odrc::util::log_level::info, true);
-      odrc::util::timer  t1("area1", logger);
-      odrc::util::timer  t2("area2", logger);
-      odrc::util::timer  t3("area3", logger);
-      t1.start();
-      odrc::area_check_dac23(db, 19, 504);
-      t1.pause();
-      t2.start();
-      odrc::area_check_dac23(db, 20, 504);
-      t2.pause();
-      t3.start();
-      odrc::area_check_dac23(db, 30, 504);
-      t3.pause();
+      // odrc::util::logger logger("/dev/null", odrc::util::log_level::info, true);
+      // odrc::util::timer  t1("area1", logger);
+      // odrc::util::timer  t2("area2", logger);
+      // odrc::util::timer  t3("area3", logger);
+      // t1.start();
+      // odrc::area_check_dac23(db, 19, 504);
+      // t1.pause();
+      // t2.start();
+      // odrc::area_check_dac23(db, 20, 504);
+      // t2.pause();
+      // t3.start();
+      // odrc::area_check_dac23(db, 30, 504);
+      // t3.pause();
     }
     // {
     //   odrc::util::logger logger("/dev/null", odrc::util::log_level::info,
